@@ -17,12 +17,12 @@ function App() {
     setProjectsState((prevState) => ({
       ...prevState,
       tasks: [
+        ...prevState.tasks,
         {
           id: Math.random(),
           projectId: prevState.selectedProjectId,
           task: task,
         },
-        ...prevState.tasks,
       ],
     }));
   }
